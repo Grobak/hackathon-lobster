@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AddMemberPage } from '../add-member/add-member';
+import { SigninPage } from '../signin/signin';
 
 @IonicPage()
 @Component({
@@ -18,6 +19,10 @@ export class AuthPage {
 
   register() {
     this.navCtrl.push(AddMemberPage);
+  }
+
+  connect() {
+    this.navCtrl.push(SigninPage);
   }
 
 }

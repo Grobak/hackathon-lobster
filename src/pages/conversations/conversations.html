@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Conversations en cours</ion-title>
+  <ion-navbar color="orange">
+    <ion-title>Conversation en cours</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list inset>
-  
+
     <ion-item *ngFor="let conv of convs" (click)="goToConv(conv.Id, conv.Name)" >       <!-- Lance la répétition de l'ion-item  -->
 
       <ion-avatar item-start >
@@ -18,6 +18,6 @@
 
     </ion-item>                                                      <!-- Termine ion-item  -->
 
- </ion-list> 
+ </ion-list>
 
 </ion-content>

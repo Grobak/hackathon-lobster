@@ -1,7 +1,7 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Conversation avec {{name}} </ion-title>
-  </ion-navbar>
+	<ion-navbar color="orange">
+		<ion-title>Conversation avec {{name}}</ion-title>
+	</ion-navbar>
 </ion-header>
 
 <ion-content>
@@ -19,14 +19,15 @@
   		  <ion-item *ngIf="msg.Who == 1" class="rightMsg">
   	      <ion-avatar item-end>
 	  	    	  <ion-img src={{msg.Img}}></ion-img>
-	  	    </ion-avatar>    		
+	  	    </ion-avatar>
           {{ msg.Msg }}
 			  </ion-item>
-      </ion-item>  
+      </ion-item>
 	</ion-list>
  	<ion-item class="chatBoxBottom">
+
   	  	<ion-label color="primary" class="msgInput">  <ion-icon ios="ios-add" md="md-add" (click)="loadFile(file)"></ion-icon></ion-label>
-  	  	<ion-input placeholder="Appuyez ici pour écrire"></ion-input>
+  	  	<ion-input placeholder="Appuyez ici pour écrire" #m></ion-input>
   	</ion-item>
 
 

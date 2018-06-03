@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-profil',
+  templateUrl: 'profil.html'
 })
-export class AboutPage {
+export class ProfilPage {
 
   constructor(public navCtrl: NavController) {
 
@@ -14,16 +14,15 @@ export class AboutPage {
 //Json de la bdd pour mon profils.
   items = [{
 
-    pseudo:'Ipersky',
-    mdp:'Password',
+    pseudo:'McQueen75',
+    passeword:'Password',
     age:'23',
     mail:'julienbraga@hotmail.fr',
-    sexe:'homme',
-    orientation:'femme ',
-    description:'je suis un homme serieurs ',
-    aime:'j aime les annimaux',
-    aimepas:'jaime pas les con',
-    philosophi:"Avant l'heur c'est deja l'heur a l'heur c'est l'heur apres l'heur tu degages " 
+    sexe:'Homme',
+    orientation:' des femmes',
+    description:'Je suis un homme sérieux ',
+    aime:"J'aime les animaux",
+    aimepas:"Je n'aime pas le gâteau au chocolat"
 
 	//this.navCTRL.push("page-".item);
 
