@@ -9,7 +9,7 @@ import { AuthPage } from '../pages/auth/auth';
 
 @Component({
   templateUrl: 'app.html'
-})
+}) 
 export class MyApp {
   rootPage:any = AuthPage;
 
