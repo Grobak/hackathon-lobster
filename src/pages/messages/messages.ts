@@ -24,7 +24,6 @@ export class MessagesPage {
   	constructor(public navCtrl: NavController, public navParams: NavParams) {
       	this.name = navParams.get('name');
       	this.id = navParams.get('id');
-
   	}
 
   	ionViewDidLoad() {
@@ -35,10 +34,10 @@ export class MessagesPage {
   	}
 
   	ionViewWillLeave() {
-  		if(this.load == "loadedFrom"){
-	  	  	this.navCtrl.pop();
-  		  	this.navCtrl.push(ConversationsPage);
-  		}
+  		//if(this.load == "loadedFrom"){
+	  	//  	this.navCtrl.pop();
+  		//  	this.navCtrl.push(ConversationsPage);
+  		//}
   	}
 
   	conv = [{Id:0, Name:'Charlotte', Age:18, Gender:"female", Img:"../../assets/imgs/avatar2.png", Msg:"Salut c'est charlotte.", Who:0},
@@ -47,6 +46,5 @@ export class MessagesPage {
 
   	goToProfile(id: number){
   		console.log(id);
-
   	}
 }

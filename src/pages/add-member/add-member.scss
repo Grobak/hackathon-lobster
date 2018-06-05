@@ -1,20 +1,27 @@
 page-add-member {
-position:relative;
-input{
-    text-align: center;
-	border: none;
-	border-radius:30px;
-	// height: 10%;
-	width: 90%;
-	margin: 5%;
-	padding: 1em;
-	background-color: rgb(242,241,239);
-
-}
-
-
-}
-
+	position:relative;
+	input{
+	    text-align: center;
+		border: none;
+		border-radius:30px;
+		// height: 10%;
+		width: 90%;
+		margin: 5%;
+		padding: 1em;
+		background-color: rgb(242,241,239);
+	}
+	
+	.signinfield{
+	    text-align: center;
+		border: none;
+		border-radius:30px;
+		// height: 10%;
+		width: 90%;
+		margin: 5%;
+		padding: 1em;
+		
+	}
+	
 	#button {
 		position: absolute;
 		bottom: 3em;
@@ -23,3 +30,4 @@ input{
 
 
 
+}

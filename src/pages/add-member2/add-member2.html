@@ -19,13 +19,13 @@
 				<h2>Je suis</h2>
 			</ion-col>
 		</ion-row>
-		<ion-row text-center>
-			<ion-col>
-				<img id='profils' src='../assets/imgs/femme.png' alt=''>
+		<ion-row text-center >
+			<ion-col (click)='updateData("femme", $event.target.name)'>
+				<img id='profils' name="user.sexe" src='assets/imgs/femme.png' alt='Femme' >
 				<h3>une femme</h3>
 			</ion-col>
-			<ion-col>
-				<img id='profils' src='../assets/imgs/homme.png' alt=''>
+			<ion-col (click)='updateData("homme", $event.target.name)'>
+				<img id='profils' name="user.sexe" src='assets/imgs/homme.png' alt='Homme' >
 				<h3>un homme</h3>
 			</ion-col>
 		</ion-row>
@@ -34,13 +34,13 @@
 				<h2>Je cherche</h2>
 			</ion-col>
 		</ion-row>
-		<ion-row text-center>
-			<ion-col>
-				<img id='profils' src='../assets/imgs/femme.png' alt=''>
+		<ion-row text-center >
+			<ion-col (click)='updateData("femme", $event.target.name)'>
+				<img id='profils' name="user.behave" src='assets/imgs/femme.png' alt='Femme'>
 				<h3>une femme</h3>
 			</ion-col>
-			<ion-col>
-				<img id='profils' src='../assets/imgs/homme.png' alt=''>
+			<ion-col (click)='updateData("homme", $event.target.name)'>
+				<img id='profils' name="user.behave" src='assets/imgs/homme.png' alt='Homme'>
 				<h3>un homme</h3>
 			</ion-col>
 		</ion-row>

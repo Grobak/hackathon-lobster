@@ -5,13 +5,21 @@ import { ConversationsPage } from '../conversations/conversations';
 import { DemandesPage } from '../demandes/demandes';
 import { RadarPage } from '../radar/radar';
 
+
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController) {
+  }
+
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HomePage');
+  }
 
   goToProfil() {
     	this.navCtrl.push(ProfilPage);

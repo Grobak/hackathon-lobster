@@ -17,7 +17,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ConversationsPage {
 
   	constructor(public navCtrl: NavController, public navParams: NavParams) {
-
+    
   	}
     convs=
       [{Id:0, Name:'Charlotte', Age:18, Gender:"female", Img:"assets/imgs/avatar2.png", msg:"Salut!"},

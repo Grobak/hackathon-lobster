@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 
+//import { Observable } from 'rxjs/Observable';
+import { User } from '../../model/user/user.model';
+import { UserListService } from '../../services/user-list.service';
+ 
 /**
  * Generated class for the AddMember2Page page.
  *
@@ -16,7 +20,18 @@ import { HomePage } from '../home/home';
 })
 export class AddMember2Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  user: User = {
+    identifiant: '',
+    sexe: '',
+    birth: '',
+    mail: '',
+    password: '',
+    password2: '',
+    behave: ''
+  };
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private userListService: UserListService) {
+    this.user = navParams.get('user');;
   }
 
   ionViewDidLoad() {
@@ -24,9 +39,22 @@ export class AddMember2Page {
   }
 
   last() {
-    this.navCtrl.push(HomePage);
+    this.userListService.addUser(this.user);
+    console.log(this.user);
+    //this.navCtrl.push(HomePage);
   }
 
+  updateData(data, type){
+    switch (type) {
+      case 'user.sexe':
+          this.user.sexe = data ;
+          break;
+      case 'user.behave':
+          this.user.behave = data ;
+          break;
+      default:
+    }
+  }
 
 
 }
