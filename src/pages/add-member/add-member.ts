@@ -2,51 +2,57 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { AddMember2Page } from '../add-member2/add-member2'; 
-/*import { Observable } from 'rxjs/Observable';*/
+import { Observable } from 'rxjs/Observable';
 import { User } from '../../model/user/user.model';
-import { UserListService } from '../../services/user-list.service';
-
+ 
 @IonicPage()
 @Component({ 
   selector: 'page-add-member',
   templateUrl: 'add-member.html',
 })
 export class AddMemberPage {
-  //userList: Observable<Note[]>
+  userList: Observable<User[]>
   navP: NavParams;
-  isNew: number = 0 ;
+  isNew: number = 1 ;
 
   user: User = {
-    identifiant: '',
-    sexe: '',
-    birth: '',
-    email: '',
-    password: '',
-    password2: '',
-    behave: ''
+    pseudo: '1',
+    sexe: '1', 
+    birth: '1',
+    email: '1',
+    password: '1',
+    password2: '1',
+    behave: '1'
   };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private userListService: UserListService) {
-        this.isNew = navParams.get('isNew');
-        this.navP = navParams;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+      this.isNew = navParams.get('isNew');
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AddMemberPage');
   }
 
   last() {
-    if(this.user.password != this.user.password2){
-        console.log('Mots de passe non correspondants');    // Traitement à faire
-    }else{
-        this.navCtrl.push(AddMember2Page, {user: this.user});
-    }
+      console.log(this.user);
+      
+      if(this.user.pseudo == '1' || this.user.birth == '1' || this.user.password == '1' || this.user.email == '1'){
+        
+          console.log('Champs invalides');    // Traitement à faire
+  
+      }else if(this.user.password != this.user.password2){
+  
+          console.log('Mots de passe non correspondants');    // Traitement à faire
+      }
+      else{
+          console.log(this.user);
+          this.navCtrl.push(AddMember2Page, {user: this.user});
+      } 
   }
 
   updateData(data, type){
     switch (type) {
-      case 'user.identifiant':
-          this.user.identifiant = data ;
+      case 'user.pseudo':
+          this.user.pseudo = data ;
           break;
       case 'user.birth':
           this.user.birth = data ;

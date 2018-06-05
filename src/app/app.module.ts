@@ -7,11 +7,11 @@ import { ProfilPage } from '../pages/profil/profil';
 //import { AuthPage } from '../pages/auth/auth';
 import { HomePage } from '../pages/home/home';
 import { ConversationsPage } from '../pages/conversations/conversations';
-import { MessagesPage } from '../pages/messages/messages';
+import { MessagesPage } from '../pages/messages/messages'; 
 import { TabsPage } from '../pages/tabs/tabs';
 import { SigninPage } from '../pages/signin/signin';
 import { AddMemberPage } from '../pages/add-member/add-member';
-import { AddMember2Page } from '../pages/add-member2/add-member2';
+import { AddMember2Page } from '../pages/add-member2/add-member2'; 
 import { DemandesPage } from '../pages/demandes/demandes';
 import { RadarPage } from '../pages/radar/radar';
 

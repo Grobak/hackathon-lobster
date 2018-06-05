@@ -4,6 +4,7 @@ import { ProfilPage } from '../profil/profil';
 import { ConversationsPage } from '../conversations/conversations';
 import { DemandesPage } from '../demandes/demandes';
 import { RadarPage } from '../radar/radar';
+import { AddMemberPage } from '../add-member/add-member';
 
 
 
@@ -35,6 +36,10 @@ export class HomePage {
 
   goToMessages() {
     	this.navCtrl.push(ConversationsPage);
+  }
+
+  register() {
+    this.navCtrl.push(AddMemberPage, {isNew: 0});
   }
 
 

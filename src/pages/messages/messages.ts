@@ -40,9 +40,9 @@ export class MessagesPage {
   		//}
   	}
 
-  	conv = [{Id:0, Name:'Charlotte', Age:18, Gender:"female", Img:"../../assets/imgs/avatar2.png", Msg:"Salut c'est charlotte.", Who:0},
-			{ Id: 1, Name: 'Charline', Age: 19, Gender: "female", Img:"../../assets/imgs/avatar1.png", Msg:"Enchanté ! ", Who:1},
-			{ Id: 2, Name: 'Clémence', Age: 20, Gender: "female", Img:"../../assets/imgs/avatar1.png", Msg:"Tu veux causer ?", Who:1}];
+  	conv = [{Id:0, Name:'Charlotte', Age:18, Gender:"female", Img:"assets/imgs/avatar2.png", Msg:"Salut c'est charlotte.", Who:0},
+			{ Id: 1, Name: 'Charline', Age: 19, Gender: "female", Img:"assets/imgs/avatar1.png", Msg:"Enchanté ! ", Who:1},
+			{ Id: 2, Name: 'Clémence', Age: 20, Gender: "female", Img:"assets/imgs/avatar1.png", Msg:"Tu veux causer ?", Who:1}];
 
   	goToProfile(id: number){
   		console.log(id);

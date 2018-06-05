@@ -16,25 +16,58 @@
 <ion-content padding>
  <!--
   <ion-item>
-      <input [(ngModel)]="note.title" placeholder="Java Sample Approach">
+      <input [(ngModel)]="user.pseudo" placeholder="Java Sample Approach">
   </ion-item>
  
   <button ion-button block clear (click)="addNote(note)">Add</button>
 -->
   
-   <!--  <ion-item *ngIf="isNew == 1" > -->
+    <ion-item *ngIf="isNew == 1" >
         <input name="user.birth" class="signinfield" placeholder="JJ/MM/AAAA" type="date" (input)='updateData($event.target.value, $event.target.name)'>
+    </ion-item>
+    <ion-item *ngIf="isNew == 1" >
         <input name="user.email" class="signinfield" placeholder="Adresse email" type="email" (input)='updateData($event.target.value, $event.target.name)'>
-        
-        <input id="image_uploads" type="file" name="img" placeholder="photo">  
-    
-        <input name="user.identifiant" class="signinfield" placeholder="Identifiant" type="text" (input)='updateData($event.target.value, $event.target.name)'>
-        <input name="user.password" class="signinfield" placeholder="Mot de passe" type="password" (input)='updateData($event.target.value, $event.target.name)'>
-        <input name="user.password2" class="signinfield" placeholder="Confirmation" type="password" (input)='updateData($event.target.value, $event.target.name)'>
-    
-        <button id="button" ion-button color="orange" round outline block (click)=last()>Suivant</button>
-    <!-- </ion-item> -->
+    </ion-item>
 
+    <ion-item *ngIf="isNew == 1" >
+        <input id="image_uploads" type="file" name="img" placeholder="photo">  
+    </ion-item>
+
+    <ion-item *ngIf="isNew == 1" >
+        <input name="user.pseudo" class="signinfield" placeholder="pseudo" type="text" (input)='updateData($event.target.value, $event.target.name)'>
+    </ion-item>
+    <ion-item *ngIf="isNew == 1" >
+        <input name="user.password" class="signinfield" placeholder="Mot de passe" type="password" (input)='updateData($event.target.value, $event.target.name)'>
+    </ion-item>
+    <ion-item *ngIf="isNew == 1" >
+        <input name="user.password2" class="signinfield" placeholder="Confirmation" type="password" (input)='updateData($event.target.value, $event.target.name)'>
+    </ion-item>
+
+
+  
+    <ion-item *ngIf="isNew == 0" >
+        <input name="user.birth" class="signinfield" placeholder="JJ/MM/AAAA" type="date" (input)='updateData($event.target.value, $event.target.name)'>
+    </ion-item>
+    <ion-item *ngIf="isNew == 0" >
+        <input name="user.email" class="signinfield" placeholder="Adresse email" type="email" (input)='updateData($event.target.value, $event.target.name)'>
+    </ion-item>
+
+    <ion-item *ngIf="isNew == 0" >
+        <input id="image_uploads" type="file" name="img" placeholder="photo">  
+    </ion-item>
+
+    <ion-item *ngIf="isNew == 0" >
+        <input name="user.pseudo" class="signinfield" placeholder="pseudo" type="text" (input)='updateData($event.target.value, $event.target.name)'>
+    </ion-item>
+    <ion-item *ngIf="isNew == 0" >
+        <input name="user.password" class="signinfield" placeholder="Mot de passe" type="password" (input)='updateData($event.target.value, $event.target.name)'>
+    </ion-item>
+    <ion-item *ngIf="isNew == 0" >
+        <input name="user.password2" class="signinfield" placeholder="Confirmation" type="password" (input)='updateData($event.target.value, $event.target.name)'>
+    </ion-item>
+        
     
+    
+    <button id="button" ion-button color="orange" round outline block (click)=last()>Suivant</button>
 
 </ion-content>
